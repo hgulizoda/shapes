@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body div {
+    width: 350px;
+    height: 350px;
+    background-color: goldenrod;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px goldenrod;
+    transition: transform 0.6s;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+
+}
+
+.first:hover {
+    transform: rotate(360deg) scale(1.2);
+    border-radius: 0px;
+
+}
+
+.second:hover {
+    transform: skew(-10deg, -10deg)
+}
+
+.third:hover {
+    transform: skew(10deg, 10deg) scale(1.2);
+}
+
+.fourth {
+    transform: skew(-10deg);
+}
+
+.fourth:hover {
+    transform: skew(10deg);
+}
+
+.fifth {
+    transform: skew(10deg, 10deg);
+    transition: all 0.5s;
+}
+
+.fifth:hover {
+    transform: skew(25deg, 25deg) rotate(10deg) translate(20px, -20px);
+    background-color: rgb(77, 191, 191);
+
+}
+
+.sixth {
+    background-color: rgba(255, 0, 0, 0.82);
+    position: relative;
+}
+
+.sixth::before {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 350px;
+    background-color: rgba(199, 81, 81, 0.428);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    transition: transform 0.6s;
+}
+
+.sixth::after {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 350px;
+    background-color: rgba(199, 81, 81, 0.428);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    transition: transform 0.6s;
+}
+
+.sixth:hover::before {
+    transform: rotate(22.5deg);
+}
+
+.sixth:hover::after {
+    transform: rotate(-22.5deg);
+}
