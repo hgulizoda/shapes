@@ -100,3 +100,51 @@ body {
 .sixth:hover::after {
     transform: rotate(-22.5deg);
 }
+
+.seventh {
+    margin-top: 300px;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    margin-bottom: 300px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    12.5% {
+        transform: translate(0px, 200px) scale(1.2) rotate(45deg);
+    }
+
+    25% {
+        transform: translate(200px, 0px) scale(0.8) rotate(90deg);
+    }
+
+    37.5% {
+        transform: translate(0px, -200px) scale(1.4) rotate(135deg);
+    }
+
+    50% {
+        transform: translate(0, 0) scale(1) rotate(180deg);
+    }
+
+    62.5% {
+        transform: translate(0px, -200px) scale(1.4) rotate(225deg);
+    }
+
+    75% {
+        transform: translate(200px, 0px) scale(0.8) rotate(270deg);
+    }
+
+    87.5% {
+        transform: translate(0px, 200px) scale(1.2) rotate(315deg);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1) rotate(360deg);
+    }
+
+}
